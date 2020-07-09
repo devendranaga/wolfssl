@@ -117,8 +117,37 @@ struct Sha3 {
 typedef wc_Sha3 wc_Shake;
 
 
+// SHA3 hashes and thier output sizes
+//
+// SHA3-224 - 224
+// SHA3-256 - 256
+// SHA3-384 - 384
+// SHA3-512 - 512
+//
+/**
+ * @brief - init sha3_224
+ *
+ * @param - sha3 ctx (will be init by this API)
+ * @param - heap identifier , pass NULL and let the lib use static memory
+ * @param - device id - pass 0 if async not enabled as compiler option
+ */
 WOLFSSL_API int wc_InitSha3_224(wc_Sha3*, void*, int);
+
+/**
+ * @brief - update sha3_224
+ *
+ * @param - sha3 ctx (passed at init)
+ * @param - byte input buffer
+ * @param - buffer size
+ */
 WOLFSSL_API int wc_Sha3_224_Update(wc_Sha3*, const byte*, word32);
+
+/**
+ * @brief - finish the sha3_224
+ *
+ * @param - sha3 ctx (passed at init)
+ * @param - final output hash 224 bits
+ */
 WOLFSSL_API int wc_Sha3_224_Final(wc_Sha3*, byte*);
 WOLFSSL_API void wc_Sha3_224_Free(wc_Sha3*);
 WOLFSSL_API int wc_Sha3_224_GetHash(wc_Sha3*, byte*);
