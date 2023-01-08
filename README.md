@@ -5,7 +5,8 @@
 ./configure --enable-blake2 --enable-opensslcoexist --enable-aesccm \
 --enable-idea --enable-chacha --enable-cmac --enable-aesctr --enable-dh \
 --enable-dtls --enable-camellia --enable-curve25519 --enable-eccencrypt \
---enable-pwdbased --enable-arc4 --enable-ripemd --enable-siphash --enable-shake128 --enable-sha256
+--enable-pwdbased --enable-arc4 --enable-ripemd --enable-siphash --enable-shake128 --enable-sha256 \
+--enable-aeskeywrap --enable-shake128 --enable-shake256
 
 ```
 
